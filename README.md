@@ -291,13 +291,13 @@ Replace the contents of ```./rails/config/database.yml``` with the following:
 default: &default
   adapter: mysql2
   host: database
-  username: ${DB_USER}
-  password: ${DB_PASSWORD}
+  username: {DB_USER}
+  password: {DB_PASSWORD}
   pool: 5
 
 development:
   <<: *default
-  database: ${DB_NAME}
+  database: {DB_NAME}
 
 
 test:

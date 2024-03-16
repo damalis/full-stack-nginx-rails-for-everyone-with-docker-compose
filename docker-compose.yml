@@ -21,7 +21,7 @@ services:
             - database
             - redis
         healthcheck:
-            test: ["CMD-SHELL", "ps aux | grep -q "[p]uma" > /dev/null || exit 1"]
+            test: ["CMD-SHELL", "ps aux | grep -q '[p]uma' > /dev/null || exit 1"]
             interval: 5s
             timeout: 5s
             retries: 50

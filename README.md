@@ -305,6 +305,8 @@ test:
   database: myapp_test
 ```
 
+then ```docker container restart rails```
+
 [https://guides.rubyonrails.org/active_record_multiple_databases.html#setting-up-your-application](https://guides.rubyonrails.org/active_record_multiple_databases.html#setting-up-your-application)
 
 [https://mariadb.com/kb/en/configuring-mariadb-with-option-files/](https://mariadb.com/kb/en/configuring-mariadb-with-option-files/)
@@ -316,6 +318,8 @@ test:
 add the configuration in the relevant ```./rails/config/environments/*.rb``` file:
 
 ```config.cache_store = :redis_cache_store, { url: 'redis' }```
+
+then ```docker container restart rails```
 
 [https://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-rediscachestore](https://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-rediscachestore)
 

@@ -1,1 +1,5 @@
 [mysql]
+
+[mysqld]
+innodb_use_native_aio = OFF
+pid_file = /usr/local/mysql/data/mysqld.pid

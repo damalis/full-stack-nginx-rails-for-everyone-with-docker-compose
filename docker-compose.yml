@@ -4,8 +4,8 @@ services:
         depends_on:
             database:
                 condition: service_healthy
-        build: ./docker/8.0
-        #image: 'damalis/rails:8.0'
+        build: ./docker/8.1
+        #image: 'damalis/rails:8.1'
         container_name: rails
         networks:
             - backend
@@ -31,7 +31,7 @@ services:
             TZ: '${LOCAL_TIMEZONE}'
         labels:
             - 'docker-volume-backup.stop-during-backup=true'
-        command: bash -c "if [ -f \"/app/Gemfile.lock\" ]; then bundle install; else rails new . && echo -en \"gem 'redis', '~> 5.4'\\ngem 'mysql2', '~> 0.5.6'\\n\" >> /app/Gemfile; fi && rails s -p 9000 -b '0.0.0.0'"
+        command: bash -c "if [ -f \"/app/Gemfile.lock\" ]; then bundle install; else rails new . && echo -en \"gem 'redis', '~> 5.4'\\ngem 'mysql2', '~> 0.5.7'\\n\" >> /app/Gemfile; fi && rails s -p 9000 -b '0.0.0.0'"
 
     webserver:
         depends_on:
